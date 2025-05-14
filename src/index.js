@@ -100,7 +100,7 @@ class MultipleEntityRow extends LitElement {
             return null;
         }
         return html`<div class="state entity" style="${entityStyles(this.config)}" @click="${this.onRowClick}">
-            ${this.config.state_header && html`<span>${this.config.state_header}</span>`}
+            ${this.config.state_header && html`<span class="xyspan">${this.config.state_header}</span>`}
             <div>${this.renderValue(this.stateObj, this.config)}</div>
         </div>`;
     }
