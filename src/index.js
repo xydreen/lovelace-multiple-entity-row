@@ -109,7 +109,7 @@ class MultipleEntityRow extends LitElement {
         if (!stateObj || hideIf(stateObj, config)) {
             if (config.default) {
                 return html`<div class="entity" style="${entityStyles(config)}">
-                    <span>${config.name}</span>
+                    <span class="xyspan">${config.name}</span>
                     <div>${config.default}</div>
                 </div>`;
             }
@@ -117,7 +117,7 @@ class MultipleEntityRow extends LitElement {
         }
         const onClick = this.clickHandler(stateObj.entity_id, config.tap_action);
         return html`<div class="entity" style="${entityStyles(config)}" @click="${onClick}">
-            <span>${entityName(stateObj, config)}</span>
+            <span class="xyspan">${entityName(stateObj, config)}</span>
             <div>${config.icon ? this.renderIcon(stateObj, config) : this.renderValue(stateObj, config)}</div>
         </div>`;
     }
